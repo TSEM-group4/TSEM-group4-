@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/TSEM-group4/TSEM-group4-/issues"
   },
-  "homepage": "https://github.com/TSEM-group4/TSEM-group4-#readme"
+  "homepage": "https://github.com/TSEM-group4/TSEM-group4-#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "request": "^2.88.2",
+    "unirest": "^0.6.0"
+  }
 }

@@ -1,6 +1,7 @@
 // our token 
 module.exports = {
-    token: "BQCwZKX3JFZd09crFA01nruM61AmErzX5ODOnr4NPkodrWR5EUVUZXl00X_cd9x0dBJlxueTVRb5sX3qIGSP0csYvr8ZJ9zfTCyPBoDS0IGoJAhuA5tcMh2ZrSaphU_"
+    token:"BQASUfvnon7gXYqtPcygHKaQ9cSGGWUWYrACJU18UK2Q2VXhOeKmkdIyA9fGrBQfwtR8EL6Gg7M7Jw0ChRx1PSt6J52UcGiNVjGb0NdV8NspeCGpF9yvPwjSaa4mF1nmkn3hcdLKxiSCDK0hXxTzu-S5njVcKh21fGg9094g_ge0h9SPDFCayVQI_m7pOV-ZFpMW8u4"
+    
 };
 
 

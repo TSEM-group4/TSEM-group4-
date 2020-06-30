@@ -2,19 +2,19 @@ const request = require('request');
 const config = require('../config.js');
 const bodyParser = require('body-parser');
 
-const save = require('../server/db/index');
+// const save = require('../server/db/index.js');
 
 //retrive songs depending on the mood
 let getSongs = (genre,callback) => {
  
   let options = {
-    url: 'https://api.spotify.com/v1/playlists/'+playlist_id+'/traks',
+    url: 'https://api.spotify.com/v1/playlists/'+playListId+'/tracks',
     headers: {
-      'User-Agent': 'request',
       'Authorization': `token ${config.TOKEN}`
     }
   };
   request(options, function (error, response, body) {
+    
     callback(body);
   });
 
