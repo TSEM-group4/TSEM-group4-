@@ -1,22 +1,22 @@
 var mongoose - require(mongoose); //in order to use mongoose
 mongoose.connect("mongodb://localhost/moody")
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console,'connection error'));
-// db.once('open', ()=>{console.log('We are connected')});
-// connect mongoose to mongo database
+var db = mongoose.connection;
+db.on('error', console.error.bind(console,'connection error'));
+db.once('open', ()=>{console.log('We are connected')});
+connect mongoose to mongo database
 var Schema = mongoose.Schema; //variable refere to our schema
-import axios from "axios";
+//import axios from "axios";
 
 
 
 
 var SongsSchema = new Schema({ //songs schema 
-    id:Schema.Types.ObjectId,
-    name:String,
-    category:String,
-    coverPhoto:String,                                
-    moodDescription:String,
-    singer:String
+    
+    title:String,
+    artist:String,
+    year:Number,                                
+    web_url:String,
+    img_url:String
 })
 
 
@@ -25,17 +25,17 @@ var SongsSchema = new Schema({ //songs schema
 
 
  
-var Song= mongoose.model("Song",UserSchema); //export our UserShema so we can use it in our files
+var Song= mongoose.model("Song",SongsSchema); //export our SongsSchema so we can use it in our files
 
 
 let saveSongSchema = (songs) => {
   //save the songs that come from the client to the database
 
-    var nameOfSong = songs.nameOfSong;
-    var singer = songs.singer;
+    var title = songs.title;
+    var artist = songs.artist;
     var songss = new song({
-      name :  name,
-      singer : singer
+      title :  title,
+      artist : artist
 
     });
   
