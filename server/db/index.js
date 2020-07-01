@@ -14,7 +14,7 @@ var SongsSchema = new Schema({ //songs schema
     
     title:String,
     artist:String,
-    year:Number,                                
+    year:String,                                
     web_url:String,
     img_url:String
 })
@@ -28,25 +28,25 @@ var SongsSchema = new Schema({ //songs schema
 var Song= mongoose.model("Song",SongsSchema); //export our SongsSchema so we can use it in our files
 
 
-let saveSongSchema = (songs) => {
-  //save the songs that come from the client to the database
+// let saveSongSchema = (songs) => {
+//   //save the songs that come from the client to the database
+//    for(var i = 0 ; i < songs.length; i++)
+//     var title = songs[i].title;
+//     var artist = songs[i].artist;
+//     var songss = new song({
+//       title :  title,
+//       artist : artist
 
-    var title = songs.title;
-    var artist = songs.artist;
-    var songss = new song({
-      title :  title,
-      artist : artist
-
-    });
+//     });
   
-    songss.save();
-  }
-    module.exports.save = save;
-    module.exports.Song =Song;
+//     songss.save();
+//   }
+//     module.exports.save = save;
+//     module.exports.Song =Song;
 
 
 
-
+  
     
 
 
@@ -78,4 +78,32 @@ let saveSongSchema = (songs) => {
     db.close();
   });
 });*/
+//inside the server f.
 
+// app.get('/:index',function(req,res){
+//   Song.find(req.body,function(err,songs){
+//     if(err){
+//       res.send("something went wrong");
+//       next();
+
+//     }
+//     res.json(songs)
+//   })
+// })    
+  
+
+
+
+//.limit(9).Math.floor(Math.random() * 10);
+
+
+
+
+
+
+
+
+
+
+// mongoimport --db myDB --collection Pokemon --file pokemon.json --jsonArray 
+//the command above to connect json file to mongoodb 
