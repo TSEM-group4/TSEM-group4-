@@ -1,48 +1,34 @@
 import React, { Component } from "react";
 import "./style.css";
 import Nav from "./nav";
-import Login from "./login";
+import login from "./login";
 import Signup from "./signup";
-import Home from "./home";
+import Body from "./home";
+import About from "./aboutus";
+import Profile from "./profile";
+// import Contact from "./contactus";
+import Footer from "./footer";
+import Commuinty from "./commuinty";
+import Mood from "./mood";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      // for auth
-      loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
-    };
-
-    this.handleLogin = this.handleLogin.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
-  }
-
   render() {
     return (
       <Router>
         <div>
           <Nav />
-          <Route 
-            path="/" 
-            exact
-            render={props => (
-                <Home
-                  {...props}
-                  handleLogin={this.handleLogin}
-                  handleLogout={this.handleLogout}
-                  loggedInStatus={this.state.loggedInStatus}
-                />
-              )}
-            />
-          <Route path="/login" render={props => (
-                <Login
-                  {...props}
-                  loggedInStatus={this.state.loggedInStatus}
-                />
-              )} />
+          <Route path="/" exact component={Body} />
+          <Route path="/login" component={login} />
           <Route path="/signup" component={Signup} />
+          <Route path="/profile" component={Profile} />
+          <Footer />
+          {/* <Route path="/contactus" component={Contact} /> */}
+          <Route path="/aboutus" component={About} />
+          <Route path="/commuinty" component={Commuinty} />
+          <Route path="/mood" component={Mood} />
+          {/* <Route path="/" exact component={Body} />
+          <Route path="/" exact component={Body} /> */}
         </div>
       </Router>
     );
